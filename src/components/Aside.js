@@ -10,8 +10,8 @@ export default function Aside() {
     const showSideBar = () => setSidebar(!sidebar)
 
     return (
-    <div className='Aside'>
-        <Link to='/'>
+    <div className={sidebar?'Aside Aside-hide':'Aside Aside-show'}>
+        <Link to='#' className='aside-button'>
             {sidebar 
                 ? 
                     <AiIcons.AiOutlineDoubleRight 
@@ -25,10 +25,10 @@ export default function Aside() {
                     />
             }
         </Link>
-        <div className={sidebar?'nav-menu':'nav-menu-active'}>
-            <ul className={sidebar?'nav-elements':'nav-menu-elements-active'}>
+        <div className='nav-menu'>
+            <ul className='nav-menu-elements'>
                 <li>
-                    <Link to='#'>
+                    <Link to='#' className='nav-element'>
                         Opción 1
                     </Link>
                 </li>

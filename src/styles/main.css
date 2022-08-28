@@ -1,0 +1,93 @@
+.main{
+    position: fixed;
+    top: 50px;
+    left: 200px;
+    /* background: #161623; */
+    background: rgb(239, 236, 238);
+    width: calc(100% - 200px);
+    height: calc(100vh - 50px);
+    padding: 35px 40px 110px;
+    display: grid;
+    grid-template-rows: 10% 45% 45%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        'title title'
+        'container_1 container_1'
+        'container_2 container_2';
+    grid-gap: 14px 30px;
+    transition: 0.5;
+
+}
+
+.main h2{
+    grid-area: title;
+    width: 80%;
+    margin-left: 20px;
+    color: black;
+    font-weight: bolder;
+    border-bottom: 3px solid black;
+}
+
+.main .container{
+    margin: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main .c_1{
+    grid-area:  container_1;
+}
+
+.main .c_2{
+    grid-area:  container_2;
+}
+
+.main .container .module{
+    width: 250px;
+    height: 70%;
+    background: #654c7e;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px 20px;
+    padding-left: 20px;
+    transition: 0.5s!important;
+}
+
+.main .container .module:hover{
+    background: #312240;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.main .container .module div{
+    /* display: flex; */
+    /* width: 80%; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.main .container .module img{
+    width: 50px;
+    height: 50px;
+
+}
+
+.main .container .module h3{
+    text-align: left;
+    width: 75%;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.main .container .module p{
+    font-size: 10px;
+}
